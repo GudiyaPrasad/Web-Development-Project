@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantastic Journey</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: rgb(233, 218, 16);
+            color: rgb(244, 38, 15);
+            text-align: center;
+            padding: 1em;
+        }
+
+        nav {
+            background-color: darkolivegreen;
+            color: lightgray;
+            padding: 0.5em;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 1em;
+            margin: 0 1em;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        section .dual-section {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        section .dual-section div {
+            flex: 1;
+            margin-right: 10px; /* Adjust the margin as needed */
+        }
+
+        section h3 {
+            color: lightcoral;
+        }
+
+        section img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Responsive Design */
+        @media only screen and (max-width: 600px) {
+            nav a {
+                display: block;
+                margin: 1em 0;
+            }
+
+            section .dual-section {
+                flex-direction: column;
+            }
+
+            section .dual-section div {
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Fantastic Journey</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <section>
+        <h2>Welcome to our fantastic journey!</h2>
+        <p>Embark on a journey of discovery with our incredible website, showcasing diverse topics with captivating images.</p>
+        
+        <div class="dual-section">
+            <div>
+                <h3>Exploration Section 1</h3>
+                <img src="fantastic-joureny-upscaled (1).png" alt="Image 1">
+                <p>Uncover fascinating information and stories in this exploration section.</p>
+            </div>
+
+            <div>
+                <h3>Exploration Section 2</h3>
+                <img src="fantastic-joureny-upscaled.png" alt="Image 2">
+                <p>Discover even more in this second exploration section.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2023 Fantastic Journey. All rights reserved.
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #000;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    /* Style for the gallery container */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: -50px; /* Adjust this value to move the gallery above the center */
+    }
+
+    /* Style for thumbnail images */
+    .thumbnail {
+      width: 100px;
+      height: 100px;
+      margin: 5px;
+      cursor: pointer;
+    }
+
+    /* Style for the modal (enlarged image) */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Style for the modal content (enlarged image) */
+    .modal-content {
+      max-width: 80%;
+      max-height: 80%;
+    }
+
+    /* Style for the close button */
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      color: #fff;
+      font-size: 30px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="gallery">
+  <!-- Thumbnail images -->
+  <img class="thumbnail" src="7.avif" alt="Image 1" onclick="openModal('7.avif')">
+  <img class="thumbnail" src="5.avif" alt="Image 2" onclick="openModal('5.avif')">
+  <img class="thumbnail" src="4.avif" alt="Image 3" onclick="openModal('4.avif')">
+  <img class="thumbnail" src="3.avif" alt="Image 4" onclick="openModal('3.avif')">
+  <img class="thumbnail" src="6.avif" alt="Image 5" onclick="openModal('6.avif')">
+  <!-- Add more thumbnail images as needed -->
+</div>
+
+<!-- The modal -->
+<div id="myModal" class="modal" onclick="closeModal()">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImage">
+</div>
+
+<script>
+  // Function to open the modal and display the clicked image
+  function openModal(imageSrc) {
+    var modal = document.getElementById("myModal");
+    var modalImg = document.getElementById("modalImage");
+    modal.style.display = "flex";
+    modalImg.src = imageSrc;
+  }
+
+  // Function to close the modal
+  function closeModal() {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "none";
+  }
+</script>
+
+</body>
+</html>
